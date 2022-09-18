@@ -1,0 +1,99 @@
+.page-header-container {
+    display: flex;
+}
+
+.page-header {
+    border-bottom: 1px solid #ececec;
+    background-color: var(--main-background-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.page-header .home-link {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 97px;
+}
+
+.menu-list {
+    display: flex;
+    column-gap: 50px;
+}
+
+.menu-item .link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--headers-color);
+
+    transition: color var(--transition-dur-and-func);
+}
+
+.menu-item .link.current {
+    color: var(--accent-color)
+}
+
+.header-contacts {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-contacts .mail-icon,
+.header-contacts .phone-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.envelope {
+    width: 16px;
+    height: 12px;
+}
+
+.smartphone {
+    width: 10px;
+    height: 16px;
+}
+
+.header-contacts .mail,
+.header-contacts .phone {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+
+    transition: color var(--transition-dur-and-func);
+}
+
+.menu-link:hover,
+.menu-link:focus,
+.header-contacts .mail:hover,
+.header-contacts .mail:focus,
+.header-contacts .phone:hover,
+.header-contacts .phone:focus {
+    color: var(--accent-color);
+}
+
+.header-contacts .mail-icon:hover,
+.header-contacts .mail-icon:focus,
+.header-contacts .phone-icon:hover,
+.header-contacts .phone-icon:focus {
+    fill: var(--accent-color);
+}
+
+.current::after {
+    position: relative;
+    top: 30px;
+    left: 0;
+    display: block;
+    content: "";
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+}
