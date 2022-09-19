@@ -122,7 +122,7 @@
     transition: fill var(--transition-dur-and-func);
 }
 
-.modal-wdw-form__policy-check:checked .modal-wdw-form__own-tickbox-icon {
+.modal-wdw-form__policy-check:checked+.modal-wdw-form__own-tickbox .modal-wdw-form__own-tickbox-icon {
     display: block;
 }
 
