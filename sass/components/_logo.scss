@@ -5,14 +5,14 @@
     line-height: 1.19;
 }
 
-.home-link .web {
+.home-link__web {
     color: var(--accent-color);
 }
 
-.home-link .studio-up {
+.home-link__studio--header {
     color: var(--headers-color);
 }
 
-.home-link .studio-down {
+.home-link__studio--footer {
     color: var(--white-text-color);
 }

@@ -1,15 +1,23 @@
-.subscibe-form-wrapper {
+.subscibe-form__wrapper {
     margin-left: auto;
 }
 
-.subscribe-form-inner-wrapper {
+.subscribe-form__title {
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+}
+
+.subscribe-form__inner-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-top: 20px;
 }
 
-.subscribe-form-input {
+.subscribe-form__input {
     width: 358px;
     height: 50px;
     margin-right: 12px;
@@ -19,19 +27,19 @@
     border-radius: 4px;
     cursor: pointer;
     color: var(--white-text-color);
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
-.subscribe-form-input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.subscribe-form-input:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.subscribe-form-button {
+.subscribe-form__button {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,9 +51,14 @@
     border-radius: 4px;
 
     transition: background-color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-color);
+    }
 }
 
-.subscribe-form-button-title {
+.subscribe-form__button-title {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -55,14 +68,9 @@
     color: var(--white-text-color);
 }
 
-.subscribe-form-icon {
+.subscribe-form__button-icon {
     width: 24px;
     height: 24px;
     padding: 0;
     fill: var(--white-text-color);
-}
-
-.subscribe-form-button:hover,
-.subscribe-form-button:focus {
-    background-color: var(--button-hover-color);
 }

@@ -10,7 +10,7 @@
     transition: opacity 500ms linear, visibility 500ms linear;
 }
 
-.modal-backdrop.is-hidden {
+.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -32,7 +32,7 @@
     transition: transform 500ms ease;
 }
 
-.modal-wdw-close-btn {
+.modal-wdw__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -51,15 +51,15 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-wdw-close-btn:active .modal-wdw {
+.modal-wdw__close-btn:active .modal-wdw {
     transform: translate(-50%, -50%) scale(0);
 }
 
-.modal-wdw-close-btn .close-icon {
+.modal-wdw__close-icon {
     transition: fill var(--transition-dur-and-func);
 }
 
-.modal-wdw-close-btn:hover .close-icon,
-.modal-wdw-close-btn:focus .close-icon {
+.modal-wdw__close-btn:hover .modal-wdw__close-icon,
+.modal-wdw__close-btn:focus .modal-wdw__close-icon {
     fill: var(--accent-color);
 }

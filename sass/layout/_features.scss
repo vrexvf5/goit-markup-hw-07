@@ -1,13 +1,17 @@
-.features-container {
+.features {
+    background-color: var(--main-background-color);
+}
+
+.features__features-container {
     display: flex;
     column-gap: 30px;
 }
 
-.features-item {
+.features__item {
     width: 270px;
 }
 
-.features-item-rectangle {
+.features__item-rectangle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +22,13 @@
     background-color: var(--secondary-background-color);
 }
 
-.features .icon {
+.features__icon {
     width: 70px;
     height: 70px;
     margin: 0;
 }
 
-.features .title {
+.features__title {
     margin-bottom: 9px;
 
     font-size: 14px;
@@ -34,11 +38,6 @@
     color: var(--headers-color);
 }
 
-.features .text {
+.features__text {
     line-height: 1.71;
-}
-
-.features,
-.tasks {
-    background-color: var(--main-background-color);
 }

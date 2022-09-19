@@ -7,23 +7,23 @@
     background-color: var(--main-background-color);
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-}
-
 .page-header .home-link {
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 97px;
 }
 
-.menu-list {
+.page-header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__menu-list {
     display: flex;
     column-gap: 50px;
 }
 
-.menu-item .link {
+.page-header__menu-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -32,35 +32,35 @@
     transition: color var(--transition-dur-and-func);
 }
 
-.menu-item .link.current {
+.page-header__menu-link.current {
     color: var(--accent-color)
 }
 
-.header-contacts {
+.page-header__contacts {
     display: flex;
     column-gap: 50px;
     align-items: center;
     margin-left: auto;
 }
 
-.header-contacts .mail-icon,
-.header-contacts .phone-icon {
+.page-header__contacts-mail-icon,
+.page-header__contacts-phone-icon {
     margin-right: 10px;
     fill: currentColor;
 }
 
-.envelope {
+.page-header__contacts-mail-icon--envelope {
     width: 16px;
     height: 12px;
 }
 
-.smartphone {
+.page-header__contacts-phone-icon--smartphone {
     width: 10px;
     height: 16px;
 }
 
-.header-contacts .mail,
-.header-contacts .phone {
+.page-header__contacts-mail,
+.page-header__contacts-phone {
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -71,28 +71,28 @@
     transition: color var(--transition-dur-and-func);
 }
 
-.menu-link:hover,
-.menu-link:focus,
-.header-contacts .mail:hover,
-.header-contacts .mail:focus,
-.header-contacts .phone:hover,
-.header-contacts .phone:focus {
+.page-header__menu-link:hover,
+.page-header__menu-link:focus,
+.page-header__contacts-mail:hover,
+.page-header__contacts-mail:focus,
+.page-header__contacts-phone:hover,
+.page-header__contacts-phone:focus {
     color: var(--accent-color);
 }
 
-.header-contacts .mail-icon:hover,
-.header-contacts .mail-icon:focus,
-.header-contacts .phone-icon:hover,
-.header-contacts .phone-icon:focus {
+.page-header__contacts-mail-icon:hover,
+.page-header__contacts-mail-icon:focus,
+.page-header__contacts-phone-icon:hover,
+.page-header__contacts-phone-icon:focus {
     fill: var(--accent-color);
 }
 
 .current::after {
+    content: "";
     position: relative;
     top: 30px;
     left: 0;
     display: block;
-    content: "";
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);

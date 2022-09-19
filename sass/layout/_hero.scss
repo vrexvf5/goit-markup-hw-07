@@ -14,7 +14,7 @@
     background-size: cover;
 }
 
-.hero-title {
+.hero__title {
     width: 696px;
     margin-bottom: 30px;
     font-weight: 900;
@@ -23,9 +23,10 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: var(--white-text-color);
 }
 
-.hero-button {
+.hero__button {
     width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -39,17 +40,13 @@
     line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
+    color: var(--white-text-color);
     background-color: var(--accent-color);
 
     transition: background var(--transition-dur-and-func);
-}
 
-.hero-title,
-.hero-button {
-    color: var(--white-text-color);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-    background-color: var(--button-hover-color);
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-color);
+    }
 }

@@ -1,9 +1,9 @@
-.modal-wdw-contact-info {
+.modal-wdw-form {
     display: flex;
     flex-direction: column;
 }
 
-.modal-wdw-title {
+.modal-wdw-form__title {
     margin-bottom: 12px;
 
     font-weight: 700;
@@ -13,10 +13,10 @@
     color: var(--headers-color);
 }
 
-.modal-wdw-username,
-.modal-wdw-userphone,
-.modal-wdw-usermail,
-.modal-wdw-comments {
+.modal-wdw-form__username,
+.modal-wdw-form__userphone,
+.modal-wdw-form__usermail,
+.modal-wdw-form__comments {
     margin-bottom: 4px;
 
     font-size: 12px;
@@ -25,13 +25,13 @@
     color: var(--main-text-color);
 }
 
-.modal-wdw-userphone,
-.modal-wdw-usermail,
-.modal-wdw-comments {
+.modal-wdw-form__userphone,
+.modal-wdw-form__usermail,
+.modal-wdw-form__comments {
     margin-top: 10px;
 }
 
-.modal-wdw-form-input {
+.modal-wdw-form__input {
     width: 100%;
     height: 40px;
     padding: 0;
@@ -43,13 +43,17 @@
     cursor: pointer;
 
     transition: border-color var(--transition-dur-and-func);
+
+    &:focus {
+        border-color: var(--accent-color);
+    }
 }
 
-.modal-wdw-form-input-wrapper {
+.modal-wdw-form__input-wrapper {
     position: relative;
 }
 
-.modal-wdw-item-icon {
+.modal-wdw__item-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -64,26 +68,22 @@
     transition: fill var(--transition-dur-and-func);
 }
 
-.modal-wdw-form-input:focus {
-    border-color: var(--accent-color);
-}
-
-.modal-wdw-form-input:focus+.modal-wdw-item-icon {
+.modal-wdw-form__input:focus+.modal-wdw__item-icon {
     fill: var(--accent-color);
 }
 
-.modal-wdw-form-input-comments {
+.modal-wdw-form__input-comments {
     height: 120px;
     margin-bottom: 20px;
     padding: 12px 16px;
     resize: none;
-}
 
-.comments::placeholder {
+    &::placeholder {
     color: rgba(117, 117, 117, 0.5);
+    }
 }
 
-.modal-wdw-policy {
+.modal-wdw-form__policy {
     display: flex;
     align-items: baseline;
     padding-left: 12px;
@@ -93,56 +93,57 @@
     cursor: pointer;
 }
 
-.modal-wdw-policy-check {
+.modal-wdw-form__policy-check {
     position: absolute;
     appearance: none;
 }
 
-.modal-wdw-policy-tickbox {
+.modal-wdw-form__own-tickbox {
     width: 16px;
     height: 15px;
     border: 2px solid var(--headers-color);
     border-radius: 2px;
     background-color: var(--main-background-color);
     cursor: pointer;
-
+   
     transition: background var(--transition-dur-and-func), border-color var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
 }
 
-.modal-wdw-policy-tickbox>.icon {
-    width: 11px;
-    height: 8px;
-    fill: var(--white-text-color);
-    display: none;
-
-    transition: fill var(--transition-dur-and-func);
-}
-
-.modal-wdw-policy-check:checked+.modal-wdw-policy-tickbox {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.modal-wdw-policy-check:checked+.modal-wdw-policy-tickbox .icon {
-    display: block;
-}
-
-.modal-wdw-policy-check:focus+.modal-wdw-policy-tickbox {
+.modal-wdw-form__policy-check:focus+.modal-wdw-form__own-tickbox {
     box-shadow: 0 0 0 1px var(--accent-color);
 }
 
-.modal-wdw-policy-text {
+.modal-wdw-form__own-tickbox-icon {
+    width: 11px;
+    height: 8px;
+    display: none;
+    fill: var(--white-text-color);
+    
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-wdw-form__policy-check:checked .modal-wdw-form__own-tickbox-icon {
+    display: block;
+}
+
+.modal-wdw-form__policy-check:checked+.modal-wdw-form__own-tickbox {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.modal-wdw-form__policy-text {
     margin-left: 8px;
     font-size: 14px;
     line-height: 1.71;
     color: var(--main-text-color);
 }
 
-.modal-wdw-policy-link {
+.modal-wdw-form__policy-link {
     color: var(--accent-color);
 }
 
-.modal-wdw-submit-btn {
+.modal-wdw-form__submit-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,9 +167,9 @@
     color: var(--white-text-color);
 
     transition: background var(--transition-dur-and-func);
-}
 
-.modal-wdw-submit-btn:hover,
-.modal-wdw-submit-btn:focus {
-    background: var(--button-hover-color);
+    &:hover,
+    &:focus {
+        background: var(--button-hover-color);
+    }
 }

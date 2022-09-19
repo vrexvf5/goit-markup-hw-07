@@ -1,9 +1,10 @@
 .tasks {
     padding-bottom: 94px;
     text-align: center;
+    background-color: var(--main-background-color);
 }
 
-.tasks-title {
+.tasks__title {
     margin-bottom: 50px;
 
     font-weight: 700;
@@ -13,18 +14,18 @@
     color: var(--headers-color);
 }
 
-.tasks-list {
+.tasks__list {
     display: flex;
     column-gap: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.tasks-card {
+.tasks__card {
     position: relative;
 }
 
-.tasks-label {
+.tasks__label {
     position: absolute;
     bottom: 0;
     left: 0;
